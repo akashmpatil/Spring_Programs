@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+<!-- <bean id="e1" class="com.capgemini.model.Employee">  
+<constructor-arg value="101"/>  
+<constructor-arg  value="Sachin"/>  
+</bean>   -->
+ <context:annotation-config></context:annotation-config>
+<bean id="address" class="com.capgemini.model.Address">  
+<constructor-arg value="21,Lohianagar"></constructor-arg>  
+<constructor-arg value="Ghaziabad"></constructor-arg>  
+<constructor-arg value="UP"></constructor-arg>  
+<constructor-arg value="USA"></constructor-arg>  
+</bean>  
+<context:component-scan base-package="com.capgemini" />
+
+<!-- <bean id="e1" class="com.capgemini.model.Employee">
+<constructor-arg index="0" value="101"/>
+<constructor-arg index="1" value="Sachin"/>
+<constructor-arg index="2" ref="address"/>
+</bean>  -->
+<!-- <bean id="e1" class="com.capgemini.model.Employee" autowire="constructor" >
+<constructor-arg index="0" value="101"/>
+<constructor-arg index="1" value="Sachin"/>
+</bean> -->
+</beans>
